@@ -15,7 +15,7 @@ If you are a git user, you can install the theme and keep up to date by cloning 
 Download
 ```bash
 QCONFIG="XDG_CONFIG_HOME:-$HOME/.config/quassel-irc.org"
-curl -L https://raw.githubusercontent.com/0lzi/quassel/main/cattpuchin-mocha.qss $QCONFIG
+wget https://raw.githubusercontent.com/0lzi/quassel/master/catppuchin-mocha.qss $QCONFIG
 
 ```
 #### Activating theme
