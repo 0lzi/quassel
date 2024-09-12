@@ -1,20 +1,6 @@
-/**
 **
-**	▓█████▄  ██▀███  ▄▄▄      ▄████▄   █    ██  ██▓    ▄▄▄      
-**	▒██▀ ██▌▓██ ▒ ██▒████▄   ▒██▀ ▀█   ██  ▓██▒▓██▒   ▒████▄    
-**	░██   █▌▓██ ░▄█ ▒██  ▀█▄ ▒▓█    ▄ ▓██  ▒██░▒██░   ▒██  ▀█▄  
-**	░▓█▄   ▌▒██▀▀█▄ ░██▄▄▄▄██▒▓▓▄ ▄██▒▓▓█  ░██░▒██░   ░██▄▄▄▄██ 
-**	░▒████▓ ░██▓ ▒██▒▓█   ▓██▒ ▓███▀ ░▒▒█████▓ ░██████▒▓█   ▓██▒
-**	 ▒▒▓  ▒ ░ ▒▓ ░▒▓░▒▒   ▓▒█░ ░▒ ▒  ░░▒▓▒ ▒ ▒ ░ ▒░▓  ░▒▒   ▓▒█░
-**	 ░ ▒  ▒   ░▒ ░ ▒░ ▒   ▒▒ ░ ░  ▒   ░░▒░ ░ ░ ░ ░ ▒  ░ ▒   ▒▒ ░
-**	 ░ ░  ░   ░░   ░  ░   ▒  ░         ░░░ ░ ░   ░ ░    ░   ▒   
-**	   ░       ░          ░  ░ ░         ░         ░  ░     ░  ░
-**	 ░                       ░                                  
-**/
-
-
-/**
-** This theme is a fork of DarkSolarized (https://gist.github.com/Zren/e91ad5197f9d6b6d410f)
+** This theme is a fork of dracula/quassel https://github.com/dracula/quassel
+** which is a fork of DarkSolarized (https://gist.github.com/Zren/e91ad5197f9d6b6d410f)
 ** using Dracula colours (https://github.com/dracula/dracula-theme)
 **/
 
@@ -55,36 +41,36 @@
 Palette {
     /* Window colors */
     window: #2b2b2b;
-    background: #44475a;
+    background: #313244;
     foreground: #f8f8f2;
 
-    base: #282a36;
-    alternate-base: #2b2b2b;
+    base: #1e1e2e;
+    alternate-base: #181825;
 
     /* Just setting palette(tooltip-base) doesn't work as intended so we set it in
     ** a QTooltip{} rule as well.
     */
     tooltip-base: #282a36; // palette(base)
-    tooltip-text: white; // palette(text)
+    tooltip-text: #cdd6f4; // palette(text)
 
     /* The following attributes should be done in a scale */
-    light: #444444; // Tab Borders, Scrollbar handle grips, Titled Panel border (Settings)
+    light: #b4befe; // Tab Borders, Scrollbar handle grips, Titled Panel border (Settings)
     midlight: #333333; // ?
-    button: #292929; // Menu BG, Scrollbar and Button base.
+    button: #11111b; // Menu BG, Scrollbar and Button base.
     mid: #252525; // Titled Panel border (Settings)
-    dark: #202020; // TreeView [-] and ... color (Also various borders in Windows Client Style)
+    dark: #11111b; // TreeView [-] and ... color (Also various borders in Windows Client Style)
     shadow: #1d1d1d; // ?
 
 
     /* Text colors */
-    text: white;
-    button-text: #f8f8f2;
+    text: #cdd6f4;
+    button-text: #cdd6f4;
 
-    highlight: #44475a;
+    highlight: #9399b2;
 
     /* Link colors */
-    link: #ff79c6;
-    link-visited: #bd93f9;
+    link: #89b4fa;
+    link-visited: #b4befe;
 
     /* Color of the marker line in the chat view. BG Node that is overlayed on the first new ChatLine. */
     // 0 -> 0.1 (sharp line)
@@ -320,13 +306,13 @@ ChatView QScrollBar:hover {
 }
 
 ChatView QScrollBar::handle {
-    border-color: #44475a;
-    background: #44475a;
+    border-color: #fab387;
+    background: #fab387;
 }
 
 ChatView QScrollBar::handle:hover {
-    border-color: #44475a;
-    background: #44475a;
+    border-color: #fab387;
+    background: #fab387;
 }
 
 /**/
@@ -402,14 +388,14 @@ StyledLabel#topicLabel { background: palette(base);  font-family: consolas; }
     type: query, channel, network
 **/
 ChatListItem { foreground: #f8f8f2; }
-ChatListItem[state="inactive"] { foreground: #44475a; }
+ChatListItem[state="inactive"] { foreground: #f9e2af; }
 ChatListItem[state="channel-event"] { foreground: #6272a4; } /* palette(button-text) */
 ChatListItem[state="unread-message"] { foreground: #f8f8f2; }
-ChatListItem[state="highlighted"] { foreground: #44475a; }
+ChatListItem[state="highlighted"] { foreground: #fab387; }
 
-ChatListItem[type="network", state="unread-message"] { foreground: #44475a; }
-ChatListItem[type="network", state="highlighted"] { foreground: #44475a; }
-ChatListItem[type="query", state="unread-message"] { foreground: #44475a; }
+ChatListItem[type="network", state="unread-message"] { foreground: #fab387; }
+ChatListItem[type="network", state="highlighted"] { foreground: #fab387; }
+ChatListItem[type="query", state="unread-message"] { foreground: #fab387; }
 
 
 /* Nick List */
@@ -419,14 +405,14 @@ ChatListItem[type="query", state="unread-message"] { foreground: #44475a; }
 **/
 NickListItem[type="category"] { foreground: #6272a4; }
 NickListItem[type="user"] { foreground: #f8f8f2 }
-NickListItem[type="user", state="away"] { foreground: #44475a; }
+NickListItem[type="user", state="away"] { foreground: #fab387; }
 
 
 
 /* Chatbox Line Formatting */
 ChatLine[label="highlight"] {
-    foreground: #f8f8f2;
-    background: #44475a;
+    foreground: #181825;
+    background: #89b4fa;
 }
 
 /*
@@ -437,7 +423,7 @@ ChatLine[label="highlight"] { font-weight: bold; }
 ChatLine::timestamp[label="highlight"]{ font-weight: normal; }
 */
 
-ChatLine::timestamp[label="highlight"] { foreground: #44475a; }
+ChatLine::timestamp[label="highlight"] { foreground: #bac2de; }
 
 ChatLine::timestamp {  }
 
@@ -447,8 +433,8 @@ ChatLine::contents {
 }
 
 ChatLine#plain { foreground: #f8f8f2; }
-ChatLine#notice { foreground: #44475a; }
-ChatLine#action { foreground: #50fa7b; font-style: italic; font-weight: bold; }
+ChatLine#notice { foreground: #fab387; }
+ChatLine#action { foreground: #a6e3a1; font-style: italic; font-weight: bold; }
 ChatLine#nick { foreground: #6272a4; }
 ChatLine#mode { foreground: #6272a4; }
 ChatLine#join { foreground: #6272a4; }
@@ -456,13 +442,13 @@ ChatLine#part { foreground: #6272a4; }
 ChatLine#quit { foreground: #6272a4; }
 ChatLine#kick { foreground: #6272a4; }
 ChatLine#kill { foreground: #6272a4; }
-ChatLine#server { foreground: #44475a; }
-ChatLine#info { foreground: #44475a; }
-ChatLine#error { foreground: #ff5555; }
-ChatLine#daychange { foreground: #44475a; }
-ChatLine#topic { foreground: #f1fa8c; }
-ChatLine#netsplit-join { foreground: #44475a; }
-ChatLine#netsplit-quit { foreground: #44475a; }
+ChatLine#server { foreground: #fab387; }
+ChatLine#info { foreground: #fab387; }
+ChatLine#error { foreground: #f38ba8; }
+ChatLine#daychange { foreground: #fab387; }
+ChatLine#topic { foreground: #f9e2af; }
+ChatLine#netsplit-join { foreground: #fab387; }
+ChatLine#netsplit-quit { foreground: #fab387; }
 
 ChatLine::timestamp {
     foreground: #586e75;
@@ -477,7 +463,7 @@ ChatLine::url {
 }
 
 /* Sender Colors */
-ChatLine::sender#plain[sender="self"] { foreground: #586e75; }
+ChatLine::sender#plain[sender="self"] { foreground: #7f849c; }
 
 
 /* Uncomment this is you want all senders the same color: */
@@ -489,14 +475,14 @@ ChatLine::sender#plain[sender="self"] { foreground: #586e75; }
  * Then take the modulo (the remainder) when divided by 16.
  * Preview: http://i.imgur.com/xeRKI4H.png
  */
-ChatLine::sender#plain[sender="0"] { foreground: #6272a4; }
-ChatLine::sender#plain[sender="1"] { foreground: #8be9fd; }
-ChatLine::sender#plain[sender="2"] { foreground: #50fa7b; }
-ChatLine::sender#plain[sender="3"] { foreground: #ffb86c; }
-ChatLine::sender#plain[sender="4"] { foreground: #ff79c6; }
-ChatLine::sender#plain[sender="5"] { foreground: #bd93f9; }
-ChatLine::sender#plain[sender="6"] { foreground: #ff5555; }
-ChatLine::sender#plain[sender="7"] { foreground: #f1fa8c; }
+ChatLine::sender#plain[sender="0"] { foreground: #45475a; }
+ChatLine::sender#plain[sender="1"] { foreground: #94e2d5; }
+ChatLine::sender#plain[sender="2"] { foreground: #a6e3a1; }
+ChatLine::sender#plain[sender="3"] { foreground: #fab387; }
+ChatLine::sender#plain[sender="4"] { foreground: #eba0ac; }
+ChatLine::sender#plain[sender="5"] { foreground: #cba6f7; }
+ChatLine::sender#plain[sender="6"] { foreground: #f38ba8; }
+ChatLine::sender#plain[sender="7"] { foreground: #f5e0dc; }
 
 /* -32 */
 /*ChatLine::sender#plain[sender="8"] { foreground: #6272a4; }*/
@@ -505,17 +491,17 @@ ChatLine::sender#plain[sender="7"] { foreground: #f1fa8c; }
 /*ChatLine::sender#plain[sender="b"] { foreground: #ffb86c; }*/
 /*ChatLine::sender#plain[sender="c"] { foreground: #ff79c6; }*/
 /*ChatLine::sender#plain[sender="d"] { foreground: #bd93f9; }*/
-/*ChatLine::sender#plain[sender="e"] { foreground: #ff5555; }*/
+/*ChatLine::sender#plain[sender="e"] { foreground: #f38ba8; }*/
 /*ChatLine::sender#plain[sender="f"] { foreground: #f1fa8c; }*/
 
 /* +32 */
-ChatLine::sender#plain[sender="8"] { foreground: #6272a4; }
-ChatLine::sender#plain[sender="9"] { foreground: #8be9fd; }
-ChatLine::sender#plain[sender="a"] { foreground: #50fa7b; }
+ChatLine::sender#plain[sender="8"] { foreground: #585b70; }
+ChatLine::sender#plain[sender="9"] { foreground: #74c7ec; }
+ChatLine::sender#plain[sender="a"] { foreground: #89dceb; }
 ChatLine::sender#plain[sender="b"] { foreground: #ffb86c; }
 ChatLine::sender#plain[sender="c"] { foreground: #ff79c6; }
 ChatLine::sender#plain[sender="d"] { foreground: #bd93f9; }
-ChatLine::sender#plain[sender="e"] { foreground: #ff5555; }
+ChatLine::sender#plain[sender="e"] { foreground: #f38ba8; }
 ChatLine::sender#plain[sender="f"] { foreground: #f1fa8c; }
 
 
