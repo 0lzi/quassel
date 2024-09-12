@@ -1,6 +1,6 @@
-# Dracula for [Quassel](http://www.quassel-irc.org/)
+# Catppuccin  for [Quassel](http://www.quassel-irc.org/)
 
-> A Catppuchin-mocha theme for [Quassel](http://www.quassel-irc.org/) IRC client
+> A Catppuccin -mocha theme for [Quassel](http://www.quassel-irc.org/) IRC client
 
 ![Screenshot](./screenshot.png)
 
@@ -15,12 +15,12 @@ If you are a git user, you can install the theme and keep up to date by cloning 
 Download
 ```bash
 QCONFIG="XDG_CONFIG_HOME:-$HOME/.config/quassel-irc.org"
-wget https://raw.githubusercontent.com/0lzi/quassel/master/catppuchin-mocha.qss $QCONFIG
+wget https://raw.githubusercontent.com/0lzi/quassel/master/catppuccin-mocha.qss $QCONFIG
 
 ```
 #### Activating theme
 
-1.  Place the `cattpuchin-mocha.qss` file in your `~/.config/quassel-irc.org` folder
+1.  Place the `catppuccin-mocha.qss` file in your `~/.config/quassel-irc.org` folder
 2.  Select and apply this theme via _Interface Settings_.
 
 
