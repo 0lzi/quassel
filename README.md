@@ -1,30 +1,32 @@
 # Dracula for [Quassel](http://www.quassel-irc.org/)
 
-> A dark theme for [Quassel](http://www.quassel-irc.org/) IRC client
+> A Catppuchin-mocha theme for [Quassel](http://www.quassel-irc.org/) IRC client
 
 ![Screenshot](./screenshot.png)
 
 ## Install
 
-All instructions can be found at [draculatheme.com/quassel](https://draculatheme.com/quassel).
+If you are a git user, you can install the theme and keep up to date by cloning the repo:
 
-## Team
+    git clone https://github.com/0lzi/quassel.git
 
-This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/template/graphs/contributors).
+#### Install manually
 
-| [![Stephen Maxwell](https://avatars0.githubusercontent.com/u/25594630?v=3&s=70)](https://github.com/iinkky) |
-| ----------------------------------------------------------------------------------------------------------- |
-| [Stephen Maxwell](https://github.com/iinkky)                                                                |
+Download
+```bash
+QCONFIG="XDG_CONFIG_HOME:-$HOME/.config/quassel-irc.org"
+curl -L https://raw.githubusercontent.com/0lzi/quassel/main/cattpuchin-mocha.qss $QCONFIG
 
-## Community
+```
+#### Activating theme
 
-- [Twitter](https://twitter.com/draculatheme) - Best for getting updates about themes and new stuff.
-- [GitHub](https://github.com/dracula/dracula-theme/discussions) - Best for asking questions and discussing issues.
-- [Discord](https://draculatheme.com/discord-invite) - Best for hanging out with the community.
+1.  Place the `cattpuchin-mocha.qss` file in your `~/.config/quassel-irc.org` folder
+2.  Select and apply this theme via _Interface Settings_.
+
 
 ## Credits
 
-This theme is a fork of the [DarkSolarized](https://gist.github.com/Zren/e91ad5197f9d6b6d410f) theme with [Dracula](https://github.com/dracula/dracula-theme) colours.
+This theme is a fork of [dracula/quassel](https://github.com/dracula/quassel)
 
 For other stylesheets see [here](http://bugs.quassel-irc.org/projects/quassel-irc/wiki/Stylesheet_Gallery).
 
